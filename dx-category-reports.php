@@ -38,7 +38,7 @@ if ( ! class_exists( 'DX_Category_Reports' ) ) {
 	class DX_Category_Reports {
 		
 		public function __construct() {
-			add_action( 'init', array( $this, 'register_options_page' ) );
+			add_action( 'admin_menu', array( $this, 'register_options_page' ) );
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_media' ) );
 		}
 		
